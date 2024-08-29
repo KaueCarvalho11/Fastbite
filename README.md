@@ -72,3 +72,10 @@ Implementação e definições para gerenciamento de cardápio usando árvore bi
 * **src/pedido.c** e **include/pedido.h**
 
  Implementação e definições para gerenciamento de pedidos utilizando heap e tabela hash.
+
+
+ ## Colaboradores
+- [Francisco Ádrian](https://github.com/adrianviniciuscs)
+- [Franciêr Eduardo](https://github.com/FrancierLuz)
+- [Juanny Thayssa](https://github.com/Thayssz)
+- [Kauê Carvalho](https://github.com/KaueCarvalho11)
