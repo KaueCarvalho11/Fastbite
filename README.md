@@ -7,7 +7,8 @@ Sistema de gerenciamento de pedidos e cardápio para um restaurante. O sistema o
 - [Árvore Binária](#árvore-binária)   
 - [Compilação](#compilação)  
 - [Instruções de Uso](#instruções-de-uso)  
-- [Estrutura de Arquivos](#estrutura-de-arquivos)  
+- [Estrutura de Arquivos](#estrutura-de-arquivos) 
+- [Colaboradores](#colaboradores) 
 
 
 ## Funcionalidades
@@ -75,7 +76,7 @@ Implementação e definições para gerenciamento de cardápio usando árvore bi
 
 
  ## Colaboradores
-- [Francisco Ádrian](https://github.com/adrianviniciuscs)
 - [Franciêr Eduardo](https://github.com/FrancierLuz)
+- [Francisco Ádrian](https://github.com/adrianviniciuscs)
 - [Juanny Thayssa](https://github.com/Thayssz)
 - [Kauê Carvalho](https://github.com/KaueCarvalho11)
