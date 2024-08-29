@@ -21,14 +21,28 @@ No modo loja, os usuários podem:
 
 Envia o pedido com maior prioridade para entrega. A prioridade é determinada pela ordem de criação dos pedidos (primeiro a entrar, primeiro a sair - FIFO).
 
+
 * **Listar pedidos**
 
 Lista todos os pedidos armazenados na tabela hash, mostrando o ID do pedido e a descrição.
 
 
 * **Cancelar pedido**
+
 Permite ao administrador cancelar um pedido específico, removendo-o da heap e da tabela hash.
 
+* **Sair**
 
+Sai do modo loja.
 
+## Estruturas de Dados Utilizadas
+
+### Árvore Binária
+Utilizada para armazenar e gerenciar os itens do cardápio, permitindo adições, remoções e alterações eficientes.
+
+### Heap Mínima
+Utilizada para gerenciar os pedidos na ordem de prioridade (baseada na ordem de chegada).
+
+### Tabela Hash
+Utilizada para armazenar e acessar rapidamente os pedidos usando o ID do pedido como chave.
 
