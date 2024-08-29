@@ -46,3 +46,20 @@ Utilizada para gerenciar os pedidos na ordem de prioridade (baseada na ordem de 
 ### Tabela Hash
 Utilizada para armazenar e acessar rapidamente os pedidos usando o ID do pedido como chave.
 
+## Compilação
+
+## Instruções de Uso
+
+## Estrutura de Arquivos
+
+* **src/main.c**
+
+Contém a função principal e os menus de navegação.
+
+* **src/cardapio.c** e **include/cardapio.h**
+
+Implementação e definições para gerenciamento de cardápio usando árvore binária.
+
+* **src/pedido.c** e **include/pedido.h**
+
+ Implementação e definições para gerenciamento de pedidos utilizando heap e tabela hash.
