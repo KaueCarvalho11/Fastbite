@@ -2,13 +2,9 @@
 Sistema de gerenciamento de pedidos e cardápio para um restaurante. O sistema oferece duas opções de acesso: como cliente ou como loja, permitindo diferentes funcionalidades dependendo do modo de acesso.
 
 ## Índice  
-- [Funcionalidades](#funcionalidades)  
-- [Modo cliente](#modo-cliente)  
-- [Modo loja](#modo-loja)  
+- [Funcionalidades](#funcionalidades)    
 - [Estruturas de Dados Utilizadas](#estruturas-de-dados-utilizadas)  
-- [Árvore Binária](#árvore-binária)  
-- [Heap Mínima](#heap-mínima)  
-- [Tabela Hash](#tabela-hash)  
+- [Árvore Binária](#árvore-binária)   
 - [Compilação](#compilação)  
 - [Instruções de Uso](#instruções-de-uso)  
 - [Estrutura de Arquivos](#estrutura-de-arquivos)  
