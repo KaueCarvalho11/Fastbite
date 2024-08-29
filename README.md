@@ -6,5 +6,4 @@ Sistema de gerenciamento de pedidos e cardápio para um restaurante. O sistema o
 ### Modo cliente
 No modo cliente, os usuários podem:
 
-Visualizar Cardápio: Permite que o cliente veja o cardápio disponível.
-Fazer Pedido: O cliente pode fazer um novo pedido, especificando a descrição do pedido. O pedido é então adicionado à fila de pedidos na ordem em que foi feito.
+### <p align="center">Visualizar cardápio</p>
