@@ -8,15 +8,20 @@ unsigned long long idCounter = 0;
 Pedido *tabelaHash[TAMANHO_HASH];
 
 void inicializarTabelaHash() {
- for (int i = 0; i < TAMANHO_HASH; i++) {
-	tabelaHash[i] = NULL;
-	}
+  for (int i = 0; i < TAMANHO_HASH; i++) {
+    tabelaHash[i] = NULL;
+  }
 }
 
 unsigned int hash(int id) {
-	unsingned int valorHash = id ^ (id >> 4);
-	valorHash = valorHash & (TAMANHO_HASH - 1);
-
+  unsigned int valorHash = id ^ (id >> 4);
+  valorHash = valorHash & (TAMANHO_HASH - 1);
 }
 
-
+Heap *inicializarHeap(int capacidade) {
+  Heap *heap = (Heap *)malloc(sizeof(Heap));
+  heap->capacidade = capacidade;
+  heap->tamanho = 0;
+  heap->pedidos = (Pedido **)malloc(heap->capacidade * sizeof(Pedido *));
+  return heap;
+}
