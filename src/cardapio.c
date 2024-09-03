@@ -68,4 +68,3 @@ No* removerNo(No *raiz, char *nome) {
 
   return raiz;
 }
-

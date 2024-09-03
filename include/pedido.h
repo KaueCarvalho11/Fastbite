@@ -2,6 +2,7 @@
 #define PEDIDO_H
 
 #include <stdlib.h>
+#include <stdio.h>
 #include <time.h>
 
 typedef struct Pedido {
@@ -37,5 +38,41 @@ void inicializarTabelaHash();
  * TAMANHO_HASH - 1].
  */
 unsigned int hash(int id);
+
+/**
+ * @brief Adiciona um pedido à tabela hash.
+ *
+ * Esta função cria um novo pedido com o ID e a descrição fornecidos e
+ * o adiciona à tabela hash.
+ *
+ * @param pedido Pedido a ser adicionado
+ */
+void adicionarPedido(Pedido *pedido);
+
+/**
+ * @brief Remove um pedido da tabela hash.
+ *
+ * Esta função remove um pedido da tabela hash com o ID fornecido.
+ *
+ * @param id ID do pedido a ser removido
+ */
+void removerPedido(int id);
+
+/**
+ * @brief Lista todos os pedidos na tabela hash.
+ *
+ * Esta função percorre a tabela hash e imprime todos os pedidos nela.
+ */
+void listarPedidosTabelaHash();
+
+/**
+ * @brief Inicializa a heap.
+ *
+ * Esta função aloca memória para a heap e define todos os elementos
+ * como NULL, efetivamente limpando ou inicializando a heap para uso.
+ *
+ * @param capacidade A capacidade máxima da heap
+ */
+Heap *inicializarHeap(int capacidade);
 
 #endif // PEDIDO_H
