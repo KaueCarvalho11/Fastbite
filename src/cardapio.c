@@ -1,7 +1,7 @@
+
 #include "../include/cardapio.h"
 
-
-No* criarNo(char *nome, float preco) {
+No *criarNo(char *nome, float preco) {
   No *novoNo = (No *)malloc(sizeof(No));
   strcpy(novoNo->nome, nome);
   novoNo->preco = preco;
@@ -10,7 +10,7 @@ No* criarNo(char *nome, float preco) {
   return novoNo;
 }
 
-No* inserirNo(No *raiz, char *nome, float preco) {
+No *inserirNo(No *raiz, char *nome, float preco) {
   if (raiz == NULL) {
     return criarNo(nome, preco);
   }
@@ -24,7 +24,7 @@ No* inserirNo(No *raiz, char *nome, float preco) {
   return raiz;
 }
 
-No* buscarNo(No *raiz, char *nome) {
+No *buscarNo(No *raiz, char *nome) {
   if (raiz == NULL || strcmp(raiz->nome, nome) == 0) {
     return raiz;
   }
@@ -36,7 +36,7 @@ No* buscarNo(No *raiz, char *nome) {
   return buscarNo(raiz->direita, nome);
 }
 
-No* removerNo(No *raiz, char *nome) {
+No *removerNo(No *raiz, char *nome) {
   if (raiz == NULL) {
     return raiz;
   }

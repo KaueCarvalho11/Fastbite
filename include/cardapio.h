@@ -1,14 +1,15 @@
 #ifndef CARDAPIO_H
 #define CARDAPIO_H
 
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 typedef struct No {
-	char nome[50];
-	float preco;
-	struct No *esquerda;
-	struct No *direita;
+  char nome[50];
+  float preco;
+  struct No *esquerda;
+  struct No *direita;
 } No;
 
 /**
@@ -21,7 +22,7 @@ typedef struct No {
  * @param preco O preço do produto.
  * @return Um ponteiro para o novo nó alocado.
  */
-No* criarNo(char *nome, float preco);
+No *criarNo(char *nome, float preco);
 /**
  * @brief Insere um nó na árvore.
  *
@@ -33,7 +34,7 @@ No* criarNo(char *nome, float preco);
  * @param preco O preço do produto.
  * @return A raiz da árvore após a inserção.
  */
-No* inserirNo(No *raiz, char *nome, float preco);
+No *inserirNo(No *raiz, char *nome, float preco);
 
 /**
  * @brief Busca um nó na árvore.
@@ -45,7 +46,7 @@ No* inserirNo(No *raiz, char *nome, float preco);
  * @param nome O nome do produto a ser buscado.
  * @return Um ponteiro para o nó encontrado, ou NULL se o nó não existir.
  */
-No* buscarNo(No *raiz, char *nome);
+No *buscarNo(No *raiz, char *nome);
 /**
  * @brief Remove um nó da árvore.
  *
@@ -56,7 +57,6 @@ No* buscarNo(No *raiz, char *nome);
  * @param nome O nome do produto a ser removido.
  * @return A raiz da árvore após a remoção.
  */
-No* removerNo(No *raiz, char *nome);
-
+No *removerNo(No *raiz, char *nome);
 
 #endif // CARDAPIO_H

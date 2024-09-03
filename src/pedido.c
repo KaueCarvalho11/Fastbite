@@ -25,21 +25,13 @@ void adicionarPedido(Pedido *pedido) {
   tabelaHash[indice] = pedido;
 }
 
-void removerPedido(int id) {
-  unsigned int indice = hash(id);
-  Pedido *atual = tabelaHash[indice];
-  Pedido *anterior = NULL;
-  while (atual != NULL && atual->id != id) {
-    anterior = atual;
-    atual = atual->prox;
-  }
-  if (atual == NULL) {
-    return;
-  }
-  if (anterior == NULL) {
-    tabelaHash[indice] = atual->prox;
-  } else {
-    anterior->prox = atual->prox;
+void removerPedido(Heap *heap, int id) {
+  for (int i = 0; i < heap->tamanho; i++) {
+    if (heap->pedidos[i]->id == id) {
+      heap->pedidos[i] = heap->pedidos[heap->tamanho - 1];
+      heap->tamanho--;
+      break;
+    }
   }
 }
 

@@ -1,8 +1,9 @@
 #ifndef PEDIDO_H
 #define PEDIDO_H
 
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <time.h>
 
 typedef struct Pedido {
@@ -50,13 +51,24 @@ unsigned int hash(int id);
 void adicionarPedido(Pedido *pedido);
 
 /**
- * @brief Remove um pedido da tabela hash.
+ * @brief Remove um pedido da heap.
  *
- * Esta função remove um pedido da tabela hash com o ID fornecido.
  *
- * @param id ID do pedido a ser removido
+ * Esta função remove um pedido da heap com o ID fornecido.
+ *
+ * @param heap A heap de onde o pedido será removido
+ * @param id O ID do pedido a ser removido
  */
-void removerPedido(int id);
+void removerPedido(Heap *heap, int id);
+
+/**
+ * @brief Envia um pedido da heap.
+ *
+ * Esta função remove o pedido com o menor timestamp da heap e o envia.
+ *
+ * @param heap A heap de onde o pedido será removido
+ */
+void enviarPedido(Heap *heap);
 
 /**
  * @brief Lista todos os pedidos na tabela hash.
