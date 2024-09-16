@@ -174,4 +174,13 @@ void fazerPedido(Heap *heap);
  */
 void enviarPedido(Heap *heap);
 
+/**
+ * @brief Imprime todos os pedidos na heap.
+ *
+ * Esta função imprime todos os pedidos na heap.
+ *
+ * @param heap A heap a ser impressa
+ */
+void imprimirPedidos(Heap *heap);
+
 #endif // PEDIDO_H

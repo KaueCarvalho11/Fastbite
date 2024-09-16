@@ -145,3 +145,11 @@ void enviarPedido(Heap *heap) {
     printf("Nao ha pedidos para enviar.\n");
   }
 }
+
+void imprimirPedidos(Heap *heap) {
+  for (int i = 0; i < heap->tamanho; i++) {
+    printf("ID: %d\n", heap->pedidos[i]->id);
+    printf("Descrição: %s\n", heap->pedidos[i]->descricao);
+    printf("Timestamp: %ld\n", heap->pedidos[i]->timestamp);
+  }
+}
