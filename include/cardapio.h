@@ -59,4 +59,36 @@ No *buscarNo(No *raiz, char *nome);
  */
 No *removerNo(No *raiz, char *nome);
 
+/**
+ * @brief Modifica o nome e o preço de um nó existente.
+ *
+ * Esta função busca um nó na árvore binária de busca pelo nome original,
+ * e, se encontrado, modifica tanto o nome quanto o preço do item.
+ *
+ * @param raiz A raiz da árvore na qual será realizada a busca e modificação.
+ * @param nome O nome do item a ser modificado.
+ * @param novoPreco O novo preço a ser atribuído ao item.
+ * @param novoNome O novo nome a ser atribuído ao item.
+ */
+void modificarNo(No *raiz, char *nome, float novoPreco, char *novoNome);
+
+/**
+ * @brief Imprime o cardápio
+ *
+ * Esta função percorre a árvore binária de busca e imprime todos os nós
+ * nela.
+ *
+ * @param raiz A raiz da árvore a ser listada.
+ */
+void imprimirCardapio(No *raiz);
+
+/**
+ * @brief Menu para alterar o cardapio
+ *
+ *
+ * @param raiz A raiz da árvore a ser alterada.
+ *
+ */
+void alterarCardapio(No **raiz);
+
 #endif // CARDAPIO_H
