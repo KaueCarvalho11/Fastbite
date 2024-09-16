@@ -1,17 +1,17 @@
-# Fastbite
+<h1 align="center">FastBite</h1>    
 Sistema de gerenciamento de pedidos e cardápio para um restaurante. O sistema oferece duas opções de acesso: como cliente ou como loja, permitindo diferentes funcionalidades dependendo do modo de acesso.
 
-## Índice  
+##  📖 Índice  
 - [Funcionalidades](#funcionalidades)    
 - [Estruturas de Dados Utilizadas](#estruturas-de-dados-utilizadas)  
-- [Árvore Binária](#árvore-binária)   
-- [Compilação](#compilação)  
+- [Árvore Binária](#árvore-binária) 
+- [Clonar repositório](#clonar-repositório)  
+- [Compilar](#compilar)  
 - [Instruções de Uso](#instruções-de-uso)  
 - [Estrutura de Arquivos](#estrutura-de-arquivos) 
 - [Colaboradores](#colaboradores) 
 
-
-## Funcionalidades
+## 🔍 Funcionalidades
 
 ### Modo cliente
 No modo cliente, os usuários podem:
@@ -45,7 +45,7 @@ Permite ao administrador cancelar um pedido específico, removendo-o da heap e d
 
 Sai do modo loja.
 
-## Estruturas de Dados Utilizadas
+##  📊 Estruturas de Dados Utilizadas
 
 ### Árvore Binária
 Utilizada para armazenar e gerenciar os itens do cardápio, permitindo adições, remoções e alterações eficientes.
@@ -56,11 +56,19 @@ Utilizada para gerenciar os pedidos na ordem de prioridade (baseada na ordem de 
 ### Tabela Hash
 Utilizada para armazenar e acessar rapidamente os pedidos usando o ID do pedido como chave.
 
-## Compilação
+## ♻ Clonar repositório
+```Bash 
+$ git clone
+https://github.com/KaueCarvalho11/Fastbite.git
+```
 
-## Instruções de Uso
+## 📦 Compilar
+```Bash
+```
 
-## Estrutura de Arquivos
+## 📝 Instruções de Uso
+
+## 📁 Estrutura de Arquivos
 
 * **src/main.c**
 
@@ -75,7 +83,7 @@ Implementação e definições para gerenciamento de cardápio usando árvore bi
  Implementação e definições para gerenciamento de pedidos utilizando heap e tabela hash.
 
 
- ## Colaboradores
+ ## 💻 Colaboradores
 - [Franciêr Eduardo](https://github.com/FrancierLuz)
 - [Francisco Ádrian](https://github.com/adrianviniciuscs)
 - [Juanny Thayssa](https://github.com/Thayssz)
