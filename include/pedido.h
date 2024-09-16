@@ -111,4 +111,25 @@ int gerarId();
  */
 Pedido* criarPedido(const char* descricao);
 
+/**
+ * @brief Insere um pedido na heap.
+ *
+ * Esta função insere um pedido na heap, mantendo a propriedade de heap.
+ *
+ * @param heap A heap onde o pedido será inserido
+ * @param pedido O pedido a ser inserido
+ */
+void inserirPedidoHeap(Heap *heap, Pedido *pedido);
+
+
+/**
+ * @brief Remove o pedido com o menor timestamp da heap.
+ *
+ * Esta função remove o pedido com o menor timestamp da heap e o retorna.
+ *
+ * @param heap A heap de onde o pedido será removido
+ * @return O pedido com o menor timestamp
+ */
+void trocarPedidos(Pedido **a, Pedido **b);
+
 #endif // PEDIDO_H

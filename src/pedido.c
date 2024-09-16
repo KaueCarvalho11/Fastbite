@@ -67,3 +67,29 @@ Pedido* criarPedido(const char* descricao) {
   pedido->prox = NULL;
   return pedido;
 }
+
+void inserirPedidoHeap(Heap *heap, Pedido *pedido) {
+  if (heap->tamanho == heap->capacidade) {
+    return;
+  }
+  int indice = heap->tamanho;
+  heap->pedidos[indice] = pedido;
+  heap->tamanho++;
+  while (indice > 0) {
+    int pai = (indice - 1) / 2;
+    if (heap->pedidos[pai]->timestamp > heap->pedidos[indice]->timestamp) {
+      Pedido *temp = heap->pedidos[pai];
+      heap->pedidos[pai] = heap->pedidos[indice];
+      heap->pedidos[indice] = temp;
+      indice = pai;
+    } else {
+      break;
+    }
+  }
+}
+
+void trocarPedidos(Pedido **a, Pedido **b) {
+  Pedido *temp = *a;
+  *a = *b;
+  *b = temp;
+}
