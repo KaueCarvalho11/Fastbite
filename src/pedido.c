@@ -54,3 +54,16 @@ Heap *inicializarHeap(int capacidade) {
   heap->pedidos = (Pedido **)malloc(heap->capacidade * sizeof(Pedido *));
   return heap;
 }
+
+int gerarId() {
+  return rand();
+}
+
+Pedido* criarPedido(const char* descricao) {
+  Pedido *pedido = (Pedido *)malloc(sizeof(Pedido));
+  pedido->id = gerarId();
+  strcpy(pedido->descricao, descricao);
+  pedido->timestamp = time(NULL);
+  pedido->prox = NULL;
+  return pedido;
+}

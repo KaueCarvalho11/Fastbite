@@ -87,4 +87,28 @@ void listarPedidosTabelaHash();
  */
 Heap *inicializarHeap(int capacidade);
 
+/**
+ * @brief Gera um identificador único para um pedido.
+ *
+ * Esta função utiliza a função `rand()` para gerar um identificador 
+ * pseudoaleatório para um pedido. O ID gerado será utilizado para
+ * identificar de forma única cada pedido no sistema.
+ *
+ * @return Um número inteiro representando o ID único do pedido.
+ */
+int gerarId();
+
+/**
+ * @brief Cria e inicializa um novo pedido.
+ *
+ * Esta função aloca memória para um novo pedido e o inicializa com
+ * um ID gerado aleatoriamente, a descrição fornecida, e o timestamp 
+ * atual (que indica o momento em que o pedido foi criado). O ponteiro
+ * para o próximo pedido é inicializado como NULL.
+ *
+ * @param descricao A string que contém a descrição do pedido.
+ * @return Um ponteiro para o novo pedido criado, ou NULL em caso de falha de alocação de memória.
+ */
+Pedido* criarPedido(const char* descricao);
+
 #endif // PEDIDO_H
