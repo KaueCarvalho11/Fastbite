@@ -132,4 +132,24 @@ void inserirPedidoHeap(Heap *heap, Pedido *pedido);
  */
 void trocarPedidos(Pedido **a, Pedido **b);
 
+/**
+ * @brief Remove o pedido com o menor timestamp da heap.
+ *
+ * Esta função remove o pedido com o menor timestamp da heap e o retorna.
+ *
+ * @param heap A heap de onde o pedido será removido
+ * @return O pedido com o menor timestamp
+ */
+void minimizarHeap(Heap *heap, int i);
+
+/**
+ * @brief Remove o pedido com o menor timestamp da heap.
+ *
+ * Esta função remove o pedido com o menor timestamp da heap e o retorna.
+ *
+ * @param heap A heap de onde o pedido será removido
+ * @return O pedido com o menor timestamp
+ */
+Pedido* extrairMinimo(Heap *heap);
+
 #endif // PEDIDO_H

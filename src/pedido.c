@@ -93,3 +93,34 @@ void trocarPedidos(Pedido **a, Pedido **b) {
   *a = *b;
   *b = temp;
 }
+
+void minimizarHeap(Heap *heap, int indice) {
+  int esquerda = 2 * indice + 1;
+  int direita = 2 * indice + 2;
+  int menor = indice;
+
+  if (esquerda < heap->tamanho && heap->pedidos[esquerda]->timestamp < heap->pedidos[menor]->timestamp) {
+    menor = esquerda;
+  }
+  if (direita < heap->tamanho && heap->pedidos[direita]->timestamp < heap->pedidos[menor]->timestamp) {
+    menor = direita;
+  }
+
+  if (menor != indice) {
+    trocarPedidos(&heap->pedidos[indice], &heap->pedidos[menor]);
+    minimizarHeap(heap, menor);
+  }
+}
+
+Pedido* extrairMinimo(Heap *heap) {
+  if (heap->tamanho <= 0) {
+    return NULL;
+  }
+
+  Pedido* minimo = heap->pedidos[0];
+  heap->pedidos[0] = heap->pedidos[heap->tamanho - 1];
+  heap->tamanho--;
+  minimizarHeap(heap, 0);
+
+  return minimo;
+}
