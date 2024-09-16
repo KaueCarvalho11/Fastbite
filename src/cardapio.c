@@ -76,3 +76,11 @@ void modificarNo(No *raiz, char *nome, float novoPreco, char *novoNome) {
     strcpy(no->nome, novoNome);
   }
 }
+
+void imprimirCardapio(No *raiz) {
+  if (raiz != NULL) {
+    imprimirCardapio(raiz->esquerda);
+    printf("%s: R$ %.2f\n", raiz->nome, raiz->preco);
+    imprimirCardapio(raiz->direita);
+  }
+}
