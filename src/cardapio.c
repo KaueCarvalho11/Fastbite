@@ -68,3 +68,11 @@ No *removerNo(No *raiz, char *nome) {
 
   return raiz;
 }
+
+void modificarNo(No *raiz, char *nome, float novoPreco, char *novoNome) {
+  No *no = buscarNo(raiz, nome);
+  if (no != NULL) {
+    no->preco = novoPreco;
+    strcpy(no->nome, novoNome);
+  }
+}
