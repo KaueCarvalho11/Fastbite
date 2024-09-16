@@ -124,3 +124,24 @@ Pedido* extrairMinimo(Heap *heap) {
 
   return minimo;
 }
+
+void fazerPedido(Heap *heap) {
+  char descricao[100];
+  printf("Digite a descricao do pedido: ");
+  scanf("%s", descricao);
+
+  Pedido *pedido = criarPedido(descricao);
+  inserirPedidoHeap(heap, pedido);
+  adicionarPedido(pedido);
+}
+
+void enviarPedido(Heap *heap) {
+  Pedido *pedido = extrairMinimo(heap);
+  if (pedido) {
+    printf("Pedido enviado para entrega: ID %d, Descricao: %s\n", pedido->id, pedido->descricao);
+    removerPedido(heap, pedido->id);
+    free(pedido);
+  } else {
+    printf("Nao ha pedidos para enviar.\n");
+  }
+}

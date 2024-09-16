@@ -152,4 +152,26 @@ void minimizarHeap(Heap *heap, int i);
  */
 Pedido* extrairMinimo(Heap *heap);
 
+/**
+ * @brief Cria um novo pedido.
+ *
+ * Esta função cria um novo pedido e o adiciona na heap de pedidos.
+ *
+ * @param heap A heap pra onde o pedido vai ser adicionado.
+ */
+void fazerPedido(Heap *heap);
+
+/**
+ * @brief Envia o pedido com o menor timestamp para entrega.
+ *
+ * Esta função extrai o pedido com o menor timestamp da heap (que representa
+ * o pedido mais antigo ou com maior prioridade). Se houver um pedido disponível,
+ * ele é enviado para entrega e removido da heap. A função então libera a memória
+ * alocada para o pedido. Caso não haja pedidos, uma mensagem informando que não
+ * há pedidos disponíveis é exibida.
+ *
+ * @param heap A heap de onde o pedido será extraído e enviado.
+ */
+void enviarPedido(Heap *heap);
+
 #endif // PEDIDO_H
