@@ -84,3 +84,54 @@ void imprimirCardapio(No *raiz) {
     imprimirCardapio(raiz->direita);
   }
 }
+
+void alterarCardapio(No **raiz) {
+  int opcao;
+  char nome[50];
+  float preco;
+
+  do {
+    printf("\n ---- Alterar Cardápio ----\n");
+    printf("1 - Adicionar item\n");
+    printf("2 - Remover item\n");
+    printf("3 - Modificar item\n");
+    printf("4 - Listar cardápio\n");
+    printf("5 - Sair\n");
+    printf("Digite a opção desejada: ");
+    scanf("%d", &opcao);
+
+    switch (opcao) {
+    case 1:
+      printf("Digite o nome do item: ");
+      scanf("%s", nome);
+      printf("Digite o preço do item: ");
+      scanf("%f", &preco);
+      *raiz = inserirNo(*raiz, nome, preco);
+      break;
+    case 2:
+      printf("Digite o nome do item a ser removido: ");
+      scanf("%s", nome);
+      *raiz = removerNo(*raiz, nome);
+      break;
+    case 3:
+      printf("Digite o nome do item a ser modificado: ");
+      scanf("%s", nome);
+      printf("Digite o novo nome do item: ");
+      char novoNome[50];
+      scanf("%s", novoNome);
+      printf("Digite o novo preço do item: ");
+      float novoPreco;
+      scanf("%f", &novoPreco);
+      modificarNo(*raiz, nome, novoPreco, novoNome);
+      break;
+    case 4:
+      imprimirCardapio(*raiz);
+      break;
+    case 5:
+      break;
+    default:
+      printf("Opção inválida.\n");
+    }
+
+  } while (opcao != 5);
+}
