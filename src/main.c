@@ -39,3 +39,28 @@ void menuLoja(No **raiz, Heap *heap) {
     }
   } while (opcao != 5);
 }
+void menuCliente(Heap *heap, No *raiz) {
+  int opcao;
+  do {
+    printf("\n--- Menu Cliente ---\n");
+    printf("1. Ver cardapio\n");
+    printf("2. Fazer pedido\n");
+    printf("3. Sair\n");
+    printf("Escolha uma opcao: ");
+    scanf("%d", &opcao);
+
+    switch (opcao) {
+    case 1:
+      imprimirCardapio(raiz);
+      break;
+    case 2:
+      fazerPedido(heap);
+      break;
+    case 3:
+      printf("Saindo do modo cliente...\n");
+      break;
+    default:
+      printf("Opcao invalida! Tente novamente.\n");
+    }
+  } while (opcao != 3);
+}
