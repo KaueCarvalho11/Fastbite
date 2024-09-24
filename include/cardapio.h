@@ -6,7 +6,7 @@
 #include <string.h>
 
 typedef struct No {
-  char nome[50];
+  char *nome;
   float preco;
   struct No *esquerda;
   struct No *direita;
