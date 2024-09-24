@@ -38,7 +38,7 @@ No *buscarNo(No *raiz, char *nome) {
     return NULL;
   }
 
-  // Store the result of strcmp to avoid multiple calls
+  // Armazena o resultado de strcmp para evitar múltiplas chamadas
   int cmp = strcmp(nome, raiz->nome);
 
   if (cmp == 0) {
@@ -55,7 +55,6 @@ No *removerNo(No *raiz, char *nome) {
     return raiz;
   }
 
-  // Armazena o resultado de strcmp para evitar múltiplas chamadas
   int cmp = strcmp(nome, raiz->nome);
 
   if (cmp < 0) {
@@ -129,76 +128,84 @@ void imprimirCardapio(No *raiz) {
   }
 }
 void alterarCardapio(No **raiz) {
-    int opcao;
-    char nome[50];
-    float preco;
+  int opcao;
+  char nome[50];
+  float preco;
 
-    do {
-        printf("\n ---- Alterar Cardápio ----\n");
-        printf("1 - Adicionar item\n");
-        printf("2 - Remover item\n");
-        printf("3 - Modificar item\n");
-        printf("4 - Listar cardápio\n");
-        printf("5 - Sair\n");
-        printf("Digite a opção desejada: ");
-        if (scanf("%d", &opcao) != 1) {
-            printf("Entrada inválida. Por favor, digite um número.\n");
-            while (getchar() != '\n'); // Limpa o buffer de entrada
-            continue;
-        }
+  do {
+    printf("\n ---- Alterar Cardápio ----\n");
+    printf("1 - Adicionar item\n");
+    printf("2 - Remover item\n");
+    printf("3 - Modificar item\n");
+    printf("4 - Listar cardápio\n");
+    printf("5 - Sair\n");
+    printf("Digite a opção desejada: ");
+    if (scanf("%d", &opcao) != 1) {
+      printf("Entrada inválida. Por favor, digite um número.\n");
+      while (getchar() != '\n')
+        ; // Limpa o buffer de entrada
+      continue;
+    }
 
-        switch (opcao) {
-        case 1:
-            printf("Digite o nome do item: ");
-            while (getchar() != '\n'); // Limpa o buffer de entrada
-            fgets(nome, sizeof(nome), stdin);
-            nome[strcspn(nome, "\n")] = '\0'; // Remove o caractere de nova linha
+    switch (opcao) {
+    case 1:
+      printf("Digite o nome do item: ");
+      while (getchar() != '\n')
+        ; // Limpa o buffer de entrada
+      fgets(nome, sizeof(nome), stdin);
+      nome[strcspn(nome, "\n")] = '\0'; // Remove o caractere de nova linha
 
-            printf("Digite o preço do item: ");
-            if (scanf("%f", &preco) != 1) {
-                printf("Entrada inválida. Por favor, digite um número para o preço.\n");
-                while (getchar() != '\n'); // Limpa o buffer de entrada
-                continue;
-            }
-            *raiz = inserirNo(*raiz, nome, preco);
-            break;
-        case 2:
-            printf("Digite o nome do item a ser removido: ");
-            while (getchar() != '\n'); // Limpa o buffer de entrada
-            fgets(nome, sizeof(nome), stdin);
-            nome[strcspn(nome, "\n")] = '\0'; // Remove o caractere de nova linha
-            *raiz = removerNo(*raiz, nome);
-            break;
-        case 3:
-            printf("Digite o nome do item a ser modificado: ");
-            while (getchar() != '\n'); // Limpa o buffer de entrada
-            fgets(nome, sizeof(nome), stdin);
-            nome[strcspn(nome, "\n")] = '\0'; // Remove o caractere de nova linha
+      printf("Digite o preço do item: ");
+      if (scanf("%f", &preco) != 1) {
+        printf("Entrada inválida. Por favor, digite um número para o preço.\n");
+        while (getchar() != '\n')
+          ; // Limpa o buffer de entrada
+        continue;
+      }
+      *raiz = inserirNo(*raiz, nome, preco);
+      break;
+    case 2:
+      printf("Digite o nome do item a ser removido: ");
+      while (getchar() != '\n')
+        ; // Limpa o buffer de entrada
+      fgets(nome, sizeof(nome), stdin);
+      nome[strcspn(nome, "\n")] = '\0'; // Remove o caractere de nova linha
+      *raiz = removerNo(*raiz, nome);
+      break;
+    case 3:
+      printf("Digite o nome do item a ser modificado: ");
+      while (getchar() != '\n')
+        ; // Limpa o buffer de entrada
+      fgets(nome, sizeof(nome), stdin);
+      nome[strcspn(nome, "\n")] = '\0'; // Remove o caractere de nova linha
 
-            printf("Digite o novo nome do item: ");
-            char novoNome[50];
-            fgets(novoNome, sizeof(novoNome), stdin);
-            novoNome[strcspn(novoNome, "\n")] = '\0'; // Remove o caractere de nova linha
+      printf("Digite o novo nome do item: ");
+      char novoNome[50];
+      fgets(novoNome, sizeof(novoNome), stdin);
+      novoNome[strcspn(novoNome, "\n")] =
+          '\0'; // Remove o caractere de nova linha
 
-            printf("Digite o novo preço do item: ");
-            float novoPreco;
-            if (scanf("%f", &novoPreco) != 1) {
-                printf("Entrada inválida. Por favor, digite um número para o preço.\n");
-                while (getchar() != '\n'); // Limpa o buffer de entrada
-                continue;
-            }
-            while (getchar() != '\n'); // Limpa o buffer de entrada
+      printf("Digite o novo preço do item: ");
+      float novoPreco;
+      if (scanf("%f", &novoPreco) != 1) {
+        printf("Entrada inválida. Por favor, digite um número para o preço.\n");
+        while (getchar() != '\n')
+          ; // Limpa o buffer de entrada
+        continue;
+      }
+      while (getchar() != '\n')
+        ; // Limpa o buffer de entrada
 
-            modificarNo(*raiz, nome, novoPreco, novoNome);
-            break;
-        case 4:
-            imprimirCardapio(*raiz);
-            break;
-        case 5:
-            break;
-        default:
-            printf("Opção inválida.\n");
-        }
+      modificarNo(*raiz, nome, novoPreco, novoNome);
+      break;
+    case 4:
+      imprimirCardapio(*raiz);
+      break;
+    case 5:
+      break;
+    default:
+      printf("Opção inválida.\n");
+    }
 
-    } while (opcao != 5);
+  } while (opcao != 5);
 }

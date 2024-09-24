@@ -90,7 +90,7 @@ Heap *inicializarHeap(int capacidade);
 /**
  * @brief Gera um identificador único para um pedido.
  *
- * Esta função utiliza a função `rand()` para gerar um identificador 
+ * Esta função utiliza a função `rand()` para gerar um identificador
  * pseudoaleatório para um pedido. O ID gerado será utilizado para
  * identificar de forma única cada pedido no sistema.
  *
@@ -102,14 +102,15 @@ int gerarId();
  * @brief Cria e inicializa um novo pedido.
  *
  * Esta função aloca memória para um novo pedido e o inicializa com
- * um ID gerado aleatoriamente, a descrição fornecida, e o timestamp 
+ * um ID gerado aleatoriamente, a descrição fornecida, e o timestamp
  * atual (que indica o momento em que o pedido foi criado). O ponteiro
  * para o próximo pedido é inicializado como NULL.
  *
  * @param descricao A string que contém a descrição do pedido.
- * @return Um ponteiro para o novo pedido criado, ou NULL em caso de falha de alocação de memória.
+ * @return Um ponteiro para o novo pedido criado, ou NULL em caso de falha de
+ * alocação de memória.
  */
-Pedido* criarPedido(const char* descricao);
+Pedido *criarPedido(const char *descricao);
 
 /**
  * @brief Insere um pedido na heap.
@@ -120,7 +121,6 @@ Pedido* criarPedido(const char* descricao);
  * @param pedido O pedido a ser inserido
  */
 void inserirPedidoHeap(Heap *heap, Pedido *pedido);
-
 
 /**
  * @brief Remove o pedido com o menor timestamp da heap.
@@ -150,7 +150,7 @@ void minimizarHeap(Heap *heap, int i);
  * @param heap A heap de onde o pedido será removido
  * @return O pedido com o menor timestamp
  */
-Pedido* extrairMinimo(Heap *heap);
+Pedido *extrairMinimo(Heap *heap);
 
 /**
  * @brief Cria um novo pedido.
@@ -165,10 +165,10 @@ void fazerPedido(Heap *heap);
  * @brief Envia o pedido com o menor timestamp para entrega.
  *
  * Esta função extrai o pedido com o menor timestamp da heap (que representa
- * o pedido mais antigo ou com maior prioridade). Se houver um pedido disponível,
- * ele é enviado para entrega e removido da heap. A função então libera a memória
- * alocada para o pedido. Caso não haja pedidos, uma mensagem informando que não
- * há pedidos disponíveis é exibida.
+ * o pedido mais antigo ou com maior prioridade). Se houver um pedido
+ * disponível, ele é enviado para entrega e removido da heap. A função então
+ * libera a memória alocada para o pedido. Caso não haja pedidos, uma mensagem
+ * informando que não há pedidos disponíveis é exibida.
  *
  * @param heap A heap de onde o pedido será extraído e enviado.
  */
