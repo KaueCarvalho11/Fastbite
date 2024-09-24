@@ -19,7 +19,7 @@ void menuLoja(No **raiz, Heap *heap) {
       enviarPedido(heap);
       break;
     case 2:
-      listarPedidosTabelaHash();
+        imprimirPedidos(heap);
       break;
     case 3: {
       int id;
