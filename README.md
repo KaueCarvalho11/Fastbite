@@ -12,7 +12,7 @@ Sistema de gerenciamento de pedidos e cardápio para um restaurante. O sistema o
 
 ## 🔍 Funcionalidades
 
-### Modo cliente
+### Modo Cliente
 No modo cliente, os usuários podem:
 
 * **Visualizar cardápio**
@@ -23,7 +23,7 @@ Permite que o cliente veja o cardápio disponível.
 
 O cliente pode fazer um novo pedido, especificando a descrição do pedido. O pedido é então adicionado à fila de pedidos na ordem em que foi feito.
 
-### Modo loja
+### Modo Loja
 No modo loja, os usuários podem:
 
 * **Enviar pedido**
@@ -57,16 +57,29 @@ Utilizada para armazenar e acessar rapidamente os pedidos usando o ID do pedido 
 
 ## ♻ Clonar repositório
 ```Bash 
-$ git clone
-https://github.com/KaueCarvalho11/Fastbite.git
+$ git clone https://github.com/KaueCarvalho11/Fastbite.git
 ```
 
 ## 📦 Compilar
 ```Bash
+$ gcc -c cardapio.c main.c pedido.c
+$ gcc -o fastbite.exe cardapio.o main.o pedido.o
 ```
 
-## 📝 Instruções de Uso
-
+## 📝 Instruções de Uso 
+1. Executar o programa
+```bash
+$ ./fastbite.exe
+```
+2. Navegar através do menu
+ - Após a execução, o usuário pode navegar pelas funcionalidades do sistema através do menu:
+```bash
+--- Menu Cliente ---
+1. Ver cardapio
+2. Fazer pedido
+3. Sair
+Escolha uma opcao:
+```
 ## 📁 Estrutura de Arquivos
 
 * **src/main.c**
