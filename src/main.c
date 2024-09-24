@@ -64,3 +64,34 @@ void menuCliente(Heap *heap, No *raiz) {
     }
   } while (opcao != 3);
 }
+int main() {
+  No *raiz = NULL;
+  Heap *heap = inicializarHeap(100);
+  inicializarTabelaHash();
+
+  int opcao;
+  do {
+    printf("\n--- Menu Principal ---\n");
+    printf("1. Modo loja\n");
+    printf("2. Modo cliente\n");
+    printf("3. Sair\n");
+    printf("Escolha uma opcao: ");
+    scanf("%d", &opcao);
+
+    switch (opcao) {
+    case 1:
+      menuLoja(&raiz, heap);
+      break;
+    case 2:
+      menuCliente(heap, raiz);
+      break;
+    case 3:
+      printf("Saindo do programa...\n");
+      break;
+    default:
+      printf("Opcao invalida! Tente novamente.\n");
+    }
+  } while (opcao != 3);
+
+  return 0;
+}
