@@ -2,7 +2,7 @@
 Sistema de gerenciamento de pedidos e cardápio para um restaurante. O sistema oferece duas opções de acesso: como cliente ou como loja, permitindo diferentes funcionalidades dependendo do modo de acesso.
 
 ##  📖 Índice  
-- [Funcionalidades](#🔍-funcionalidades)    
+- [Funcionalidades](#funcionalidades)    
 - [Estruturas de Dados Utilizadas](#📊-estruturas-de-dados-utilizadas)   
 - [Clonar repositório](#♻-clonar-repositório)  
 - [Compilar](#📦-compilar)  
