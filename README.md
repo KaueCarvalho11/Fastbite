@@ -2,14 +2,15 @@
 Sistema de gerenciamento de pedidos e cardápio para um restaurante. O sistema oferece duas opções de acesso: como cliente ou como loja, permitindo diferentes funcionalidades dependendo do modo de acesso.
 
 ##  📖 Índice  
-- [Funcionalidades](#🔍-funcionalidades)    
-- [Estruturas de Dados Utilizadas](#📊-estruturas-de-dados-utilizadas)   
-- [Clonar repositório](#♻-clonar-repositório)  
-- [Compilar](#📦-compilar)  
-- [Instruções de uso](#📝-instruções-de-uso)  
-- [Estrutura de Arquivos](#📁-estrutura-de-arquivos) 
-- [Colaboradores](#💻-colaboradores) 
+- [Funcionalidades](#funcionalidades)    
+- [Estruturas de Dados Utilizadas](#estruturas-de-dados-utilizadas)   
+- [Clonar repositório](#clonar-repositorio)  
+- [Compilar](#compilar)  
+- [Instruções de uso](#instrucoes-de-uso)  
+- [Estrutura de Arquivos](#estrutura-de-arquivos) 
+- [Colaboradores](#colaboradores) 
 
+<a id="funcionalidades"></a>
 ## 🔍 Funcionalidades
 
 ### Modo Cliente
@@ -44,6 +45,7 @@ Permite ao administrador cancelar um pedido específico, removendo-o da heap e d
 
 Sai do modo loja.
 
+<a id="estruturas-de-dados-utilizadas"></a>
 ##  📊 Estruturas de Dados Utilizadas
 
 ### Árvore Binária
@@ -55,17 +57,20 @@ Utilizada para gerenciar os pedidos na ordem de prioridade (baseada na ordem de 
 ### Tabela Hash
 Utilizada para armazenar e acessar rapidamente os pedidos usando o ID do pedido como chave.
 
+<a id="clonar-repositorio"></a>
 ## ♻ Clonar repositório
 ```Bash 
 $ git clone https://github.com/KaueCarvalho11/Fastbite.git
 ```
 
+<a id="compilar"></a>
 ## 📦 Compilar
 ```Bash
 $ gcc -c cardapio.c main.c pedido.c
 $ gcc -o fastbite.exe cardapio.o main.o pedido.o
 ```
 
+<a id="instrucoes-de-uso"></a>
 ## 📝 Instruções de Uso 
 1. Executar o programa
 ```bash
@@ -80,6 +85,8 @@ $ ./fastbite.exe
 3. Sair
 Escolha uma opcao:
 ```
+
+<a id="estrutura-de-arquivos"></a>
 ## 📁 Estrutura de Arquivos
 
 * **src/main.c**
@@ -94,7 +101,7 @@ Implementação e definições para gerenciamento de cardápio usando árvore bi
 
  Implementação e definições para gerenciamento de pedidos utilizando heap e tabela hash.
 
-
+<a id="colaboradores"></a> 
  ## 💻 Colaboradores
 - [Franciêr Eduardo](https://github.com/FrancierLuz)
 - [Francisco Ádrian](https://github.com/adrianviniciuscs)
